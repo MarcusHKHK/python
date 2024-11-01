@@ -59,15 +59,4 @@ except:
     print("Tegid sisestamisel vea!")
 
 
-
-
 turtle.done
-
-
-
-
-
-
-
-
-
