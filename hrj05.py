@@ -16,8 +16,6 @@ else:
 
 turtle.fillcolor(varv)
 turtle.color(varv)
-turtle.begin_fill()
-turtle.end_fill()
 turtle.circle(50)
 turtle.done()
 
