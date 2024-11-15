@@ -87,45 +87,44 @@ def ruut(k):
            turtle.fd(100)
            turtle.lt(90)
 
-kujund = [viisnurk, ring, ruut]
 
 def suvaline(k):
     turtle.speed(0)
-    for j in range(k):
-        turtle.penup()
-        turtle.goto(random.randint(-400,400),random.randint(-400,400))
-        turtle.pendown()
-        turtle.rt(random.randint(0,90))
-        for i in range(1):
-           random.choice(valik(1,4))
-
-
-
+    for i in range(k):
+        valikud = [viisnurk, ring, ruut]
+        random.choice(valikud)(1)
 
 
 print("-------------Minu fancy programm-------------")
-valik = int(input("1 - viisnurk\n2 - ring\n3 - ruut\n4 - suvaline\nlisa valik (1-4): "))
-kujunditearv = int(input("Mitu kujundit soovid joonistada: "))
 
-if valik == 1:
-    viisnurk(kujunditearv)
-elif valik == 2:
-    ring(kujunditearv)
-elif valik == 3:
-    ruut(kujunditearv)
-elif valik == 4:
-    suvaline(kujunditearv)
+loop = 1
+
+while loop==1:
+    try:
+      valik = int(input("1 - viisnurk\n2 - ring\n3 - ruut\n4 - suvaline\nlisa valik (1-4): "))
+      kujunditearv = int(input("Mitu kujundit soovid joonistada: "))
+    except:
+        print("Game over")
+        turtle.bye()
+        loop = 0
+        break
+
+    if valik =="" or kujunditearv=="":
+        print("Game over")
+        turtle.bye()
+        loop = 0
+        break
+
+    if valik == 1:
+        viisnurk(kujunditearv)
+    elif valik == 2:
+        ring(kujunditearv)
+    elif valik == 3:
+        ruut(kujunditearv)
+    elif valik == 4:
+        suvaline(kujunditearv)
 
 
-
-
-
-
-
-
-
-
-turtle.done()
 
 
 
