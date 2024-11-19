@@ -57,7 +57,7 @@ def peegelda_porkumisel():
         ring.setheading(uus_nurk)
  
 def tuvasta_kokuporge():
-    if ring.ycor() <= -240 and ((ring.xcor() > ristkylik.xcor()-10) or (ring.xcor() > ristkylik.xcor ()+10)):
+    if ring.ycor() <= -240 and ((ring.xcor() > ristkylik.xcor()-20) or (ring.xcor() < ristkylik.xcor ()+20)):
         nurk = ring.heading()
         uus_nurk = 360 - nurk
         ring.setheading(uus_nurk)
