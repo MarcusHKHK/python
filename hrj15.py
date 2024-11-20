@@ -1,7 +1,7 @@
 #Marcus Krutto 19.22.2024
 #Harjutus 16
 
-
+import time
 import turtle
 import random
  
@@ -9,7 +9,7 @@ aken = turtle.Screen()
 aken.bgcolor("lightblue")
 aken.setup(width=600, height=600)
 aken.tracer(0)
- 
+gameover = print("Game over!")
 # ristkülik
 ristkylik = turtle.Turtle()
 ristkylik.shape("square")
@@ -43,7 +43,8 @@ def liigu_paremale():
     x = ristkylik.xcor()
     if x < 280:
         ristkylik.setx(x + ristkyliku_kiirus)
- 
+
+
 # ringi funktsioonid
 def peegelda_porkumisel():
     nurk = ring.heading()
@@ -52,18 +53,33 @@ def peegelda_porkumisel():
         if uus_nurk < 0:
             uus_nurk += 360
         ring.setheading(uus_nurk)
-    if ring.ycor() >= 300 or ring.ycor() <= -300:
+    if ring.ycor() >= 300:
         uus_nurk = 360 - nurk
         ring.setheading(uus_nurk)
+    if ring.ycor() <= -300:
+        turtle.hideturtle()
+        turtle.goto(0,0)
+        turtle.clear()
+        global gameover
+        turtle.write(gameover, font=("Arial", 20, "normal"))
+        print("Game over!")
+        time.sleep(5)
+        turtle.bye()
  
 def tuvasta_kokuporge():
-    if ring.ycor() <= -240 and ((ring.xcor() > ristkylik.xcor()-20) or (ring.xcor() < ristkylik.xcor ()+20)):
+    if ring.ycor() <= -236 and ((ring.xcor() > ristkylik.xcor()-50) and (ring.xcor() < ristkylik.xcor ()+50)):
         nurk = ring.heading()
         uus_nurk = 360 - nurk
         ring.setheading(uus_nurk)
         global skoor
+        global kiirus
+        kiirus += 2
         skoor += 1
         print(f"Skoor: {skoor}")
+        turtle.hideturtle()
+        turtle.goto(-250,250)
+        turtle.clear()
+        turtle.write(skoor, font=("Arial", 20, "normal"))
 
 def ring_liigu():
     ring.forward(kiirus)
