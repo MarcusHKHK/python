@@ -31,7 +31,7 @@ pangakonto = 15
 
 def konto_haldur(saldo, toiming, summa):
     """
-    Eriti oluline dokumentatsioon, et kõik aru saaks
+    Eriti oluline dokumentatsioon, et kõik aru saaks.  
     """
     global pangakonto
     if toiming=="deposiit":
@@ -46,7 +46,7 @@ def konto_haldur(saldo, toiming, summa):
 
 print(konto_haldur(20,"deposiit", pangakonto))
 print(konto_haldur(50,"deposiit", pangakonto))
-print(konto_haldur(150,"väljavõte", pangakonto))
+print(konto_haldur(60,"väljavõte", pangakonto))
 
 
 
