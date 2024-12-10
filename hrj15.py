@@ -60,10 +60,6 @@ def peegelda_porkumisel():
         turtle.hideturtle()
         turtle.goto(0,0)
         turtle.clear()
-        global gameover
-        turtle.write(gameover, font=("Arial", 20, "normal"))
-        print("Game over!")
-        time.sleep(5)
         turtle.bye()
  
 def tuvasta_kokuporge():
