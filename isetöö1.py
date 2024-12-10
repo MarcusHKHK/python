@@ -1,6 +1,8 @@
 #Marcus Krutto 15.5.2024
 #Iseseisev töö
 
+import random
+
 
 # print("Tere, maailm!")
 
