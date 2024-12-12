@@ -2,7 +2,7 @@
 #Iseseisev töö
 
 import random
-
+import os
 
 # print("Tere, maailm!")
 
@@ -75,13 +75,35 @@ import random
 #         i+1
 
 #Õunad
-poialpoiss = int(input("Mitu pöialpoissi soovib õuna (1-7): "))
-b = []
-for i in range(poialpoiss):
-    a = random.randint(1,2)
-    print(a)
-    b.append(a)
-print(f"Lumivalgekesele jäi {14-sum(b)} arv õuna")
+# poialpoiss = int(input("Mitu pöialpoissi soovib õuna (1-7): "))
+# b = []
+# for i in range(poialpoiss):
+#     a = random.randint(1,2)
+#     print(a)
+#     b.append(a)
+# print(f"Lumivalgekesele jäi {14-sum(b)} arv õuna")
+
+
+
+#Vastuvõetud
+
+fail = open("rebased.txt", encoding="UTF-8")
+vastuvõetud = []
+print(fail)
+for rida in fail:
+    vastuvõetud.append(int(rida))
+    fail.close()
+
+print(vastuvõetud)
+
+
+
+
+
+
+
+
+
 
 
 
