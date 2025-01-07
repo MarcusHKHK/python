@@ -102,6 +102,7 @@ email = "marcus.krutto@gmail.com"
 if "@" not in email:
     print("Sisestasite emaili valesti!")
 a = email.split(".")
+
 print(f"Tere {a[0]}, sinu email on server serveris ja domeeniks on sul com")
 
 
