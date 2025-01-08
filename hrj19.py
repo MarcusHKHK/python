@@ -38,10 +38,5 @@ for tulemus in tulemused:
         print(f"{counter12+1}.{nimi}, Hinded: ")
         for k, v in hinded.items():
             print(k, v)
-        a = tegevused.join(tegevused)
-        print(f"{a}")
-
-        
-
-
-
+        for i in tegevused:
+            print(i, end=",")
