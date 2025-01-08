@@ -17,13 +17,31 @@ for tulemus in tulemused:
     nimi = tulemus['nimi']
     klass = tulemus['klass']
     if klass == "12":
+        print(f"{counter12+1}. {nimi}")
         counter12+=1
-        print(f"{counter12}.{nimi}")
     if klass == "11":
         counter11+=1
-        print(f"{counter11}")
     if klass == "10":
         counter10+=1
-        print(f"{counter10}")
+
+#Õpilaste arv
+print(f"10. klass: {counter10}, 11. klass: {counter11}, 12. klass: {counter12}")
+
+#Trennid ja hinded
+for tulemus in tulemused:
+    nimi = tulemus['nimi']
+    klass = tulemus['klass']
+    tegevused = tulemus['tegevused']
+    hinded = tulemus['hinded']
+    tegevused = tulemus['tegevused']
+    if klass == "12":
+        print(f"{counter12+1}.{nimi}, Hinded: ")
+        for k, v in hinded.items():
+            print(k, v)
+        a = tegevused.join(tegevused)
+        print(f"{a}")
+
+        
+
 
 
