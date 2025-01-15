@@ -1,8 +1,9 @@
 #Marcus Krutto 15.01.25
 #Harjutus 22
 
+from datetime import datetime, timedelta
+
 import dateparser
-from datetime import datetime
 
 # Kuva praegune päev, kuu, aasta, tund, minut
 # Vorminda praegune kuupäev järgmiselt: d.m Y,  H:M:S
@@ -10,6 +11,6 @@ from datetime import datetime
 # Kuva vanus aastates
 # Kuva, kas tegemist on juubeliaastaga
 
-datetime_object = datetime.now()
-
-print(datetime_object)
+sp = datetime(2008, 1, 14)
+now = datetime.now
+print(now)
