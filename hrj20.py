@@ -22,7 +22,6 @@ if response.status_code == 200:
     data = response.json()
     weather = data['weather'][0]['description']
     temperature = data['main']['temp']
-    print(f"Ilma kirjeldus: {weather}")
     print(f"Hetke temperatuur: {city.title()} {temperature} °C")
 else:
     print("Viga andmete allalaadimisel:", response.status_code)
