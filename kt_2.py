@@ -10,14 +10,17 @@ import requests
 import json
 
 #Küsib kasutajalt
-# kasutaja = input("Palun sisestage riigi nimi: ")
-
-url = 'https://dummy-json.mock.beeceptor.com/countries'
+kasutaja = input("Palun sisestage märksõna: ")
+url = 'https://dummy-json.mock.beeceptor.com/quotes'
 response = requests.get(url)
 
 #Faili töötlus
 if response.status_code == 200:
     data = response.json()
-    print(response)
+    for i in data:
+        if kasutaja.lower() in i['quote']:
+            print(i['quote'])
 else:
     print("Viga andmete allalaadimisel:", response.status_code)
+
+
